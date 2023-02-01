@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mie Ayam & Sosis Mbak Tri</title>
+    <style>
+      body {
+        margin: 50px auto;
+        max-width: 800px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 50px;
+        font-family: Arial, sans-serif;
+      }
+      h1 {
+        font-size: 2.5em;
+        margin-bottom: 0.5em;
+      }
+      p {
+        font-size: 1.5em;
+        margin-top: 0.5em;
+      }
+      #countdown {
+        font-size: 3em;
+        margin-top: 0.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>redirecting to desty.page</h1>
+    <span id="countdown">3</span>
+    <script>
+      var count = 3;
+      var redirect = setInterval(function(){
+        count--;
+        if (count <= 0) {
+          clearInterval(redirect);
+          window.location.href = "https://desty.page/mbaktri";
+        }
+        document.getElementById("countdown").innerHTML = count;
+      }, 1000);
+    </script>
+  </body>
+</html>
